@@ -1,0 +1,205 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --void-black: #000000;
+  --platinum: #E5E4E2;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    @apply bg-black text-white font-sans overflow-x-hidden;
+    font-family: 'Inter Variable', 'Inter', sans-serif;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    background: #000000;
+    color: #E5E4E2;
+    min-height: 100vh;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Clean Card Effects */
+.glass-card {
+  background: #000000;
+  border: 2px solid #E5E4E2;
+  box-shadow: 4px 4px 0px 0px #E5E4E2;
+}
+
+.glass-card:hover {
+  box-shadow: 6px 6px 0px 0px #E5E4E2;
+  transform: translate(-2px, -2px);
+}
+
+/* Button Styles */
+.cyber-btn {
+  @apply relative px-6 py-3 font-medium transition-all duration-300;
+  background: #000000;
+  border: 2px solid #E5E4E2;
+  color: #E5E4E2;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.cyber-btn:hover {
+  background: #E5E4E2;
+  color: #000000;
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0px 0px #E5E4E2;
+}
+
+.cyber-btn:active {
+  transform: translate(0px, 0px);
+  box-shadow: 2px 2px 0px 0px #E5E4E2;
+}
+
+/* Progress Bar */
+.holo-progress {
+  background: #E5E4E2;
+}
+
+/* Slide Animations */
+.slide-up {
+  animation: slide-up 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Text Styles */
+.holo-text {
+  color: #E5E4E2;
+}
+
+/* Terminal Styles */
+.terminal {
+  @apply bg-black border-2 font-mono text-sm;
+  border-color: #E5E4E2;
+  box-shadow: 4px 4px 0px 0px #E5E4E2;
+}
+
+.terminal-header {
+  @apply flex items-center gap-2 p-3 border-b-2;
+  border-color: #E5E4E2;
+  background: #E5E4E2;
+  color: #000000;
+}
+
+.terminal-dot {
+  @apply w-3 h-3 rounded-full;
+}
+
+.terminal-dot.red { background: #000000; }
+.terminal-dot.yellow { background: #000000; }
+.terminal-dot.green { background: #000000; }
+
+/* Expense Item Styles */
+.expense-item {
+  @apply glass-card rounded-none p-4 transition-all duration-300;
+  border-left: 4px solid #E5E4E2;
+}
+
+.expense-item:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px 0px #E5E4E2;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E5E4E2;
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #cccccc;
+}
+
+/* Focus States */
+input:focus, textarea:focus, select:focus {
+  @apply outline-none;
+  border-color: #E5E4E2;
+  box-shadow: 0 0 0 2px #E5E4E2;
+}
+
+/* Loading States */
+.loading-shimmer {
+  background: linear-gradient(90deg, 
+    #000000 0%, 
+    #E5E4E2 50%, 
+    #000000 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Pulse Animations */
+.pulse-dot {
+  animation: pulse-simple 2s infinite;
+}
+
+@keyframes pulse-simple {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.1);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .glass-card {
+    box-shadow: 2px 2px 0px 0px #E5E4E2;
+  }
+  
+  .cyber-btn {
+    @apply px-4 py-2 text-xs;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .glass-card {
+    background: #000000;
+    border-color: #E5E4E2;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
