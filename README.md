@@ -125,10 +125,3 @@ If the app is a static client that uses an external DB (e.g., Firebase) then run
 * Include tests for backend routes or critical frontend components.
 
 ---
-
-## Contact
-
-For issues and feature requests, open an issue in the GitHub repository or contact: `<<YOUR_EMAIL_OR_HANDLE>>`.
-
----
-
