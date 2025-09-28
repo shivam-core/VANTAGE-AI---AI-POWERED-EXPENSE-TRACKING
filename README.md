@@ -25,7 +25,7 @@ Vantage AI is a web-based expense tracker with a voice-first interface (site tit
 * Optional user authentication (local or third-party). `<<CONFIRM: Is there login/signup?>`
 * Offline support (service worker / local storage). `<<CONFIRM if applicable>>`
 
-If any item above is not implemented, tell me which are incorrect and I will remove them.
+If any of the items above are not implemented, please let me know which ones are incorrect, and I will remove them.
 
 ---
 
@@ -37,7 +37,7 @@ Please replace or confirm the exact stack used by the project:
 * Backend: `<<BACKEND: e.g., Node/Express, Flask, Firebase functions, or none (static) >>`
 * Database / Storage: `<<DB: e.g., Firebase Firestore, MongoDB, SQLite, localStorage>>`
 * Hosting / Deployment: Netlify (confirmed from URL).
-  Please provide the missing tech names and I will update this section.
+  Please provide the missing tech names, and I will update this section.
 
 ---
 
@@ -125,3 +125,5 @@ If the app is a static client that uses an external DB (e.g., Firebase) then run
 * Include tests for backend routes or critical frontend components.
 
 ---
+
+DEMO URL SOON!
