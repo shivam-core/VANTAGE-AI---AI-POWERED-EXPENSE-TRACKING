@@ -125,5 +125,3 @@ If the app is a static client that uses an external DB (e.g., Firebase) then run
 * Include tests for backend routes or critical frontend components.
 
 ---
-
-DEMO URL SOON!
