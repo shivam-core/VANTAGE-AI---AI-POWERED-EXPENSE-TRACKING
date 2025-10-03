@@ -128,3 +128,5 @@ If the app is a static client that uses an external DB (e.g., Firebase) then run
 
 
 REMINDER: MODIFY THE README.MD FILE AFTER MID SEMS
+
+ALSO ADD URL TO THE MVP
